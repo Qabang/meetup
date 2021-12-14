@@ -11,26 +11,31 @@ function Login(props: {loggedIn: (bool: boolean, obj:object)=>void;} ) {
       username: 'John',
       password: 'password123',
       role: 'user',
+      events: []
     },
     {
       username: 'Alex',
       password: 'password123',
       role: 'user',
+      events: []
     },
     {
       username: 'Ruby',
       password: 'password123',
       role: 'user',
+      events: []
     },
     {
       username: 'Sandra',
       password: 'admin123',
       role: 'admin',
+      events: []
     },
     {
       username: 'David',
       password: 'admin123',
       role: 'admin',
+      events: []
     },
   ]
 
