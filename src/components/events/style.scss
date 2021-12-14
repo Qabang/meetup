@@ -1,0 +1,22 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(33% - 30px);
+  margin: 15px;
+  box-sizing: border-box;
+
+  .image-container {
+    width: 100%;
+    min-height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.events-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}

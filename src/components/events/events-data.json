@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "Tech Quiz",
+    "date": "16-12-22",
+    "time_start": "17:00",
+    "time_end": "21:00",
+    "description": "Hi Guys, We will on the 16th of December have a tech-quiz at our office and you are welcome! The quiz event will start at 17:30 and it will be held by a tech-savvy quizmaster. We will during the quiz of course offer you food and beverages. Besides the quiz you will of course get to chat with us at Devies and other tech people. If you have to cancel please do that no later than one week before the quiz. We hope to see you there",
+    "participants": 30,
+    "location": {
+      "city": "Göteborg",
+      "adress": "Drottninggatan 37",
+      "other": ""
+    }
+  },
+  {
+    "id": 2,
+    "name": "Getting started with a new Spring project",
+    "date": "12-02-22",
+    "time_start": "19:00",
+    "time_end": "21:00",
+    "description": "In this section you will be introduced to our 5 chapter series. We will then kick it of by setting up a vanilla Spring boot project and analyze the maven dependencies. Then we will kick it up a notch and use JHipster to generate the project for us and show the benefits of this amazing tool. \n Completing this section will make it easy for you to get started on your new projects, microservices and similar",
+    "participants": 80,
+    "location": {
+      "city": "Göteborg",
+      "adress": "Ebbe Lieberathsgatan 18C",
+      "other": ""
+    }
+  },
+  {
+    "id": 3,
+    "name": "Kubernetes Data Services for DevOps",
+    "date": "08-03-22",
+    "time_start": "18:00",
+    "time_end": "21:00",
+    "description": "Talk will be followed with a quick demo. We invite all practitioners to try. the data services and provide feedback & help us improve with community contribution! \n\n The participants will receive a access to try out the data service offering of ionir ( and if you are lucky will receive a gift card sponsored by ionir) \n According to the Data on Kubernetes 2021 Report, organizations are twice as productive after adopting Kubernetes to manage their data and workloads. The majority of organizations who have implemented \n DevOps have also adopted Kubernetes data services. With the ability to access data in real-time, DevOps organizations are using Kubernetes data services to gain a competitive advantage. As business demands increase, we can expect to see more organizations adopting data services to achieve faster, more efficient, and scalable DevOps operations. If you haven’t already adopted data services into your organization, \n the time is now.",
+    "participants": 35,
+    "location": {
+      "city": "Stockholm",
+      "adress": "Kungsgatan 5",
+      "other": ""
+    }
+  },
+  {
+    "id": 4,
+    "name": "Metavers",
+    "date": "26-03-22",
+    "time_start": "17:00",
+    "time_end": "19:00",
+    "description": "Confirmed participants include: Apple, Amazon, Cisco, Meta, Sonorium, Snap, and many others! Get ready for a full day of disruptive ideas and ground-breaking insights as we bring together the most revolutionary minds and reflect on the next big thing!",
+    "participants": 100,
+    "location": {
+      "city": "",
+      "adress": "",
+      "other": "Online"
+    }
+  },
+  {
+    "id": 5,
+    "name": "JavaScript Functional Programming and more- Free Virtual Workshop",
+    "date": "15-05-22",
+    "time_start": "13:00",
+    "time_end": "15:30",
+    "description": "Functional programming has been around for at least five to six years. Multiple languages have adopted functional programming paradigm. In today's meetup, we shall look at two major languages in the context of Functional Programming -- JavaScript and Java 8+. JavaScript's Functional Programming allows us to study and implement Functional Techniques, Data Types and Interaction with the DOM. With Java 8+, we shall cover Lambdas and Streams, patterns, best practices, and anti-patterns. This is an information-packed unique session where two major languages supporting Functional Programming are addressed in a single meeting. Come, have fun, learn hands-on some latest technology, participate in Q&A and network -- all geared for your success. Multiple similar sessions and technology guidance is designed throughout the most of 2020. Our sole intention is for everyone to land a better workplace, better pay and more job satisfaction through an exciting journey with us. Make sure that you and your friends attend ALL the sessions planned through this meetup in the first quarter of 2020!",
+    "participants": 50,
+    "location": {
+      "city": "",
+      "adress": "",
+      "other": "Online"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Front End Trivia Night + Prizes 🎉 🥇",
+    "date": "01-12-21",
+    "time_start": "17:00",
+    "time_end": "19:30",
+    "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
+    "participants": 65,
+    "location": {
+      "city": "Malmö",
+      "adress": "Examplestrasse 1",
+      "other": ""
+    }
+  },
+  {
+    "id": 7,
+    "name": "Front End Trivia Night + Prizes 🎉 🥇",
+    "date": "05-01-22",
+    "time_start": "17:00",
+    "time_end": "19:30",
+    "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
+    "participants": 65,
+    "location": {
+      "city": "Malmö",
+      "adress": "Examplestrasse 1",
+      "other": ""
+    }
+  },
+  {
+    "id": 8,
+    "name": "Front End Trivia Night + Prizes 🎉 🥇",
+    "date": "02-02-22",
+    "time_start": "17:00",
+    "time_end": "19:30",
+    "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
+    "participants": 65,
+    "location": {
+      "city": "Malmö",
+      "adress": "Examplestrasse 1",
+      "other": ""
+    }
+  },
+  {
+    "id": 9,
+    "name": "Front End Trivia Night + Prizes 🎉 🥇",
+    "date": "02-03-22",
+    "time_start": "17:00",
+    "time_end": "19:30",
+    "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
+    "participants": 65,
+    "location": {
+      "city": "Malmö",
+      "adress": "Examplestrasse 1",
+      "other": ""
+    }
+  },
+  {
+    "id": 10,
+    "name": "Coding On Heels | Women in Tech together sharing knowledge",
+    "date": "28-01-22",
+    "time_start": "15:00",
+    "time_end": "16:30",
+    "image": "images/girl-code.jpg",
+    "description": "Coding on Heels is a community for all the women in tech. This event is taking place every end of the Month. Different topics which matter to us are being discussed; This community gives you the opportunity to connect with wonderful women in tech. Supporting, sharing knowledge and helping each other is the spirit of this community.",
+    "participants": 150,
+    "location": {
+      "city": "",
+      "adress": "",
+      "other": "online"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Coding On Heels | Women in Tech together sharing knowledge",
+    "date": "25-02-22",
+    "time_start": "15:00",
+    "time_end": "16:30",
+    "image": "images/girl-code.jpg",
+    "description": "Coding on Heels is a community for all the women in tech. This event is taking place every end of the Month. Different topics which matter to us are being discussed; This community gives you the opportunity to connect with wonderful women in tech. Supporting, sharing knowledge and helping each other is the spirit of this community.",
+    "participants": 150,
+    "location": {
+      "city": "",
+      "adress": "",
+      "other": "online"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Coding On Heels | Women in Tech together sharing knowledge",
+    "date": "25-03-22",
+    "time_start": "15:00",
+    "time_end": "16:30",
+    "image": "images/girl-code.jpg",
+    "description": "Coding on Heels is a community for all the women in tech. This event is taking place every end of the Month. Different topics which matter to us are being discussed; This community gives you the opportunity to connect with wonderful women in tech. Supporting, sharing knowledge and helping each other is the spirit of this community.",
+    "participants": 150,
+    "location": {
+      "city": "",
+      "adress": "",
+      "other": "online"
+    }
+  }
+]
