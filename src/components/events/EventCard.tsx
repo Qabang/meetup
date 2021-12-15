@@ -20,7 +20,7 @@ useEffect(()=>{
 
   return (
     <>
-      <section className="event-card">
+      <section className="event-card" data-test="event-card-wrapper">
         <h2>{title}</h2>
         <div
           className="image-container"

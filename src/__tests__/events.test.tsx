@@ -157,4 +157,16 @@ describe('test for events at startpage "/"', () => {
     childbtn.simulate('click')
     expect(mockedUsedNavigate).toHaveBeenCalledTimes(1)
   })
+
+  test('Component Events should only render the same number of events as items in users events array at "/user/events"', () => {
+    const activeUser =   {
+      username: 'Sandra',
+      password: 'admin123',
+      role: 'admin',
+      events: [1,5,2],
+    }
+    const wrapper = mount(<Events events={eventsTestData.filter((event)=>(activeUser.events.includes(event.id)))} singleEventsCallback={jest.fn()} />)
+    expect(wrapper.find('[data-test="event-card-wrapper"]').length).toBe(activeUser.events.length)
+
+  })
 })
