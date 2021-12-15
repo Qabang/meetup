@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
 import {Users} from './models/Users'
 import Login from './components/Login'
 import Events from './components/events/Events'
-import { Events as EventsModel } from './models/Events'
-
-
 import EventsData from './components/events/events-data.json'
 import './App.css'
 
@@ -21,15 +17,8 @@ import EventItem from './components/EventItem'
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [activeUser, setActiveUser] = useState<Users>({username: '', role:'', events:[]})
-  const [eventData, setEventData ] = useState<EventsModel | null>(null)
    
   let navigate = useNavigate();
-
-  useEffect(()=>{
-    if (eventData !== null) {
-      navigate(`/event/${eventData.id}`, { replace: true });
-    }
-  }, [eventData])
 
   function handleIsLoggedIn(bool: boolean, user: any) {
     setIsLoggedIn(bool)
@@ -37,8 +26,13 @@ function App() {
   }
 
   function handleSingleEventDetails(event_data:any) {
-    console.log(event_data)
-    return setEventData(event_data)
+    navigate(`/event/${event_data.id}`, { replace: true });
+  }
+
+  function handleJoinEvent(id:number) {
+    let user = activeUser
+    user.events.push(id)
+    setActiveUser(user)
   }
 
   return (
@@ -64,7 +58,7 @@ function App() {
               ></Route>)}
               <Route
                 path="/event/:id"
-                element={<EventItem data={eventData}/>}
+                element={<EventItem events={EventsData} joinEvent={handleJoinEvent}/>}
               ></Route>
           </Routes>
         </section>
