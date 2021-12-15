@@ -1,9 +1,9 @@
-import { useContext } from "react"
-import LoginContext from "../../contexts/LoginContext"
+
 import { Events as EventsModel } from '../../models/Events'
 
 import EventCard from "./EventCard"
 import './style.scss'
+
 function Events(props: { events: Array<object> , singleEventsCallback: (obj:EventsModel)=>void}) {
   function handleClick(event_data:EventsModel) {
     console.log('Event Callback')
