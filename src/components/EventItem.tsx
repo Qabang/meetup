@@ -13,19 +13,14 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) =
     participants.filter((person) => person.username === user.username).length <
       1
   )
-  const [image, setImage] = useState('logo192.png')
-console.log(canJoin)
+  const [image, setImage] = useState(event_item.image || 'logo192.png')
+  
   useEffect(() => {  
     setCanJoin(
       user.events.filter((id) => id === event_item.id)
         .length < 1
     )
   }, [participants])
-
-  // check if event has image and replace the default image.
-  if (event_item && event_item.image) {
-    setImage(event_item.image)
-  }
 
   function handleJoinEvent() {
     setParticipants([...participants, user])
