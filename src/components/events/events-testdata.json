@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Lorem ipsum",
-    "date": "12-12-22",
+    "date": "12-12-2022",
     "time_start": "09:00",
     "time_end": "13:00",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus sit amet lectus ut pretium. Morbi ultrices dictum lorem, faucibus rhoncus dui scelerisque a. Donec euismod augue sapien, id laoreet tellus egestas sed. Morbi quis vestibulum felis. Etiam a fringilla massa, sed malesuada ante. Nullam posuere pulvinar ante, sed euismod nibh ultrices id. Cras tristique eros sed ligula tempus feugiat. Praesent ac ipsum pharetra, fermentum enim vel, maximus orci. Donec ac odio tristique, finibus felis eget, vehicula diam. Nullam rutrum lacus risus, ac molestie lectus tempus hendrerit. Sed quis aliquam sem. Proin a tempus magna. In sodales orci ac hendrerit congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse at ex vitae dui sagittis placerat non vitae neque.",
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "name": "JavaScript Evening",
-    "date": "01-30-22",
+    "date": "01-30-2022",
     "time_start": "19:00",
     "time_end": "21:00",
     "description": "Bacon ipsum dolor amet cupim meatloaf porchetta pig fatback short loin. Ground round fatback spare ribs, rump chuck beef ribs ball tip pig meatball jowl capicola kevin shank biltong. Ham hock spare ribs doner pork belly beef chicken, kevin pig porchetta. Porchetta kielbasa ribeye salami pork loin, turkey sirloin pork pork chop ham hock cupim alcatra. Strip steak chicken bacon swine leberkas.",
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "name": "DevOps meet up",
-    "date": "08-03-22",
+    "date": "08-03-2022",
     "time_start": "18:00",
     "time_end": "21:00",
     "description": "Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters. \n\n Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.",
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "name": "Laravel and Nova how to",
-    "date": "26-03-22",
+    "date": "26-03-2022",
     "time_start": "17:00",
     "time_end": "19:00",
     "description": "Cheese strings fondue squirty cheese. Dolcelatte taleggio cottage cheese brie cheese and biscuits mozzarella paneer cheesy feet. Fromage smelly cheese stilton red leicester cheese slices monterey jack hard cheese danish fontina. Cheesy grin melted cheese caerphilly croque monsieur rubber cheese melted cheese roquefort who moved my cheese. St. agur blue cheese macaroni cheese cheesy grin.",
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "name": "Express.js",
-    "date": "15-05-22",
+    "date": "15-05-2022",
     "time_start": "13:00",
     "time_end": "15:30",
     "description": "Street art put a bird on it hexagon trust fund chicharrones. Hell of squid poutine whatever, locavore before they sold out salvia roof party crucifix bitters jean shorts craft beer viral. Keffiyeh subway tile knausgaard, jean shorts stumptown pabst migas leggings helvetica four loko yr franzen skateboard godard venmo. +1 ethical leggings snackwave locavore plaid keytar sustainable ugh messenger bag. Sartorial affogato DIY, tattooed pop-up kickstarter etsy authentic man bun godard vinyl raclette jianbing man braid photo booth. Migas health goth locavore polaroid microdosing direct trade, PBR&B 90's organic.",
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "name": "Html and CSS fun facts you might not know",
-    "date": "17-06-22",
+    "date": "17-06-2022",
     "time_start": "15:00",
     "time_end": "16:30",
     "description": "Can you slack it to me? idea shower. Circle back. Agile who's responsible for the ask for this request? i don't want to drain the whole swamp, i just want to shoot some alligators or crank this out i'll book a meeting so we can solution this before the sprint is over. Pre launch viral engagement, and get buy-in for high-level we need to touch base off-line before we fire the new ux experience. What's our go to market strategy? powerpoint Bunny, nor product launch big picture not a hill to die on. Run it up the flagpole.",
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "name": "Programmer Girls night - online event",
-    "date": "04-08-22",
+    "date": "04-08-2022",
     "time_start": "15:00",
     "time_end": "16:30",
     "image": "images/girl-code.jpg",

@@ -12,15 +12,25 @@ function Events(props: {
   const [filteredEvents, setFilteredEvents] = useState(props.events)
 
   useEffect(() => {
-    setFilteredEvents(
-      props.events.filter(
-        (item: any) =>
-          item.name.match(new RegExp(searchText, 'i')) ||
-          item.description.match(new RegExp(searchText, 'i')) ||
-          item.location.city.match(new RegExp(searchText, 'i')) ||
-          item.location.other.match(new RegExp(searchText, 'i'))
-      )
+    let events = props.events.filter(
+      (item: any) =>
+        item.name.match(new RegExp(searchText, 'i')) ||
+        item.description.match(new RegExp(searchText, 'i')) ||
+        item.location.city.match(new RegExp(searchText, 'i')) ||
+        item.location.other.match(new RegExp(searchText, 'i'))
     )
+
+    let sorted_events = events.sort(function (a: any, b: any) {
+      return (
+        new Date(
+          a.date.replace(/(\d{2})-(\d{2})-(\d{4})/, '$2/$1/$3')
+        ).valueOf() -
+        new Date(
+          b.date.replace(/(\d{2})-(\d{2})-(\d{4})/, '$2/$1/$3')
+        ).valueOf()
+      )
+    })
+    setFilteredEvents(sorted_events)
   }, [searchText])
 
   function handleClick(event_data: EventsModel) {

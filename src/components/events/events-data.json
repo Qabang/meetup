@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Tech Quiz",
-    "date": "16-12-22",
+    "date": "16-12-2022",
     "time_start": "17:00",
     "time_end": "21:00",
     "description": "Hi Guys, We will on the 16th of December have a tech-quiz at our office and you are welcome! The quiz event will start at 17:30 and it will be held by a tech-savvy quizmaster. We will during the quiz of course offer you food and beverages. Besides the quiz you will of course get to chat with us at Devies and other tech people. If you have to cancel please do that no later than one week before the quiz. We hope to see you there",
@@ -16,7 +16,7 @@
   {
     "id": 2,
     "name": "Getting started with a new Spring project",
-    "date": "12-02-22",
+    "date": "12-02-2022",
     "time_start": "19:00",
     "time_end": "21:00",
     "description": "In this section you will be introduced to our 5 chapter series. We will then kick it of by setting up a vanilla Spring boot project and analyze the maven dependencies. Then we will kick it up a notch and use JHipster to generate the project for us and show the benefits of this amazing tool. \n Completing this section will make it easy for you to get started on your new projects, microservices and similar",
@@ -30,7 +30,7 @@
   {
     "id": 3,
     "name": "Kubernetes Data Services for DevOps",
-    "date": "08-03-22",
+    "date": "08-03-2022",
     "time_start": "18:00",
     "time_end": "21:00",
     "description": "Talk will be followed with a quick demo. We invite all practitioners to try. the data services and provide feedback & help us improve with community contribution! \n\n The participants will receive a access to try out the data service offering of ionir ( and if you are lucky will receive a gift card sponsored by ionir) \n According to the Data on Kubernetes 2021 Report, organizations are twice as productive after adopting Kubernetes to manage their data and workloads. The majority of organizations who have implemented \n DevOps have also adopted Kubernetes data services. With the ability to access data in real-time, DevOps organizations are using Kubernetes data services to gain a competitive advantage. As business demands increase, we can expect to see more organizations adopting data services to achieve faster, more efficient, and scalable DevOps operations. If you haven’t already adopted data services into your organization, \n the time is now.",
@@ -44,7 +44,7 @@
   {
     "id": 4,
     "name": "Metavers",
-    "date": "26-03-22",
+    "date": "26-03-2022",
     "time_start": "17:00",
     "time_end": "19:00",
     "description": "Confirmed participants include: Apple, Amazon, Cisco, Meta, Sonorium, Snap, and many others! Get ready for a full day of disruptive ideas and ground-breaking insights as we bring together the most revolutionary minds and reflect on the next big thing!",
@@ -58,7 +58,7 @@
   {
     "id": 5,
     "name": "JavaScript Functional Programming and more- Free Virtual Workshop",
-    "date": "15-05-22",
+    "date": "15-05-2022",
     "time_start": "13:00",
     "time_end": "15:30",
     "description": "Functional programming has been around for at least five to six years. Multiple languages have adopted functional programming paradigm. In today's meetup, we shall look at two major languages in the context of Functional Programming -- JavaScript and Java 8+. JavaScript's Functional Programming allows us to study and implement Functional Techniques, Data Types and Interaction with the DOM. With Java 8+, we shall cover Lambdas and Streams, patterns, best practices, and anti-patterns. This is an information-packed unique session where two major languages supporting Functional Programming are addressed in a single meeting. Come, have fun, learn hands-on some latest technology, participate in Q&A and network -- all geared for your success. Multiple similar sessions and technology guidance is designed throughout the most of 2020. Our sole intention is for everyone to land a better workplace, better pay and more job satisfaction through an exciting journey with us. Make sure that you and your friends attend ALL the sessions planned through this meetup in the first quarter of 2020!",
@@ -72,7 +72,7 @@
   {
     "id": 6,
     "name": "Front End Trivia Night + Prizes 🎉 🥇",
-    "date": "01-12-21",
+    "date": "01-12-2021",
     "time_start": "17:00",
     "time_end": "19:30",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
@@ -86,7 +86,7 @@
   {
     "id": 7,
     "name": "Front End Trivia Night + Prizes 🎉 🥇",
-    "date": "05-01-22",
+    "date": "05-01-2022",
     "time_start": "17:00",
     "time_end": "19:30",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
@@ -100,7 +100,7 @@
   {
     "id": 8,
     "name": "Front End Trivia Night + Prizes 🎉 🥇",
-    "date": "02-02-22",
+    "date": "02-02-2022",
     "time_start": "17:00",
     "time_end": "19:30",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
@@ -114,7 +114,7 @@
   {
     "id": 9,
     "name": "Front End Trivia Night + Prizes 🎉 🥇",
-    "date": "02-03-22",
+    "date": "02-03-2022",
     "time_start": "17:00",
     "time_end": "19:30",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
@@ -128,7 +128,7 @@
   {
     "id": 10,
     "name": "Coding On Heels | Women in Tech together sharing knowledge",
-    "date": "28-01-22",
+    "date": "28-01-2022",
     "time_start": "15:00",
     "time_end": "16:30",
     "image": "images/girl-code.jpg",
@@ -143,7 +143,7 @@
   {
     "id": 11,
     "name": "Coding On Heels | Women in Tech together sharing knowledge",
-    "date": "25-02-22",
+    "date": "25-02-2022",
     "time_start": "15:00",
     "time_end": "16:30",
     "image": "images/girl-code.jpg",
@@ -158,7 +158,7 @@
   {
     "id": 12,
     "name": "Coding On Heels | Women in Tech together sharing knowledge",
-    "date": "25-03-22",
+    "date": "25-03-2022",
     "time_start": "15:00",
     "time_end": "16:30",
     "image": "images/girl-code.jpg",
