@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import {Users} from './models/Users'
-import Login from './components/Login'
+import Login from './components/login/Login'
 import Events from './components/events/Events'
 import EventsData from './components/events/events-data.json'
-import './App.css'
+import { ReactComponent as Logo } from './logo.svg'
+import { ReactComponent as LogoLarge } from './logo-large.svg'
+// import './App.css'
+import './assets/styles/main.scss'
 
 import {
   NavLink,
@@ -12,7 +15,7 @@ import {
   useNavigate,
 } from 'react-router-dom'
 import LoginContext from './contexts/LoginContext'
-import EventItem from './components/EventItem'
+import EventItem from './components/eventItem/EventItem'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -62,9 +65,15 @@ function App() {
     setIsLoggedIn(bool)
     setActiveUser(user)
   }
-
+  
   function handleSingleEventDetails(event_data:any) {
     navigate(`/event/${event_data.id}`, { replace: true });
+  }
+  
+  function handleLogout() {
+    setIsLoggedIn(false)
+    setActiveUser({username: '', role:'', events:[]})
+    navigate(`/`, { replace: true });
   }
 
   function handleJoinEvent(id:number) {
@@ -85,13 +94,16 @@ function App() {
   return (
     <div className="App">
       <LoginContext.Provider value={activeUser}>
-        <header className="App-header">
+        {isLoggedIn && (<header className="App-header">
+          <Logo/>
           <nav>
             <NavLink to="/"> Start</NavLink> |
             <NavLink to="/user/events"> Joined Meetups {activeUser.events.length}</NavLink> |
-            {activeUser.username} | Joined Meetups {activeUser.events.length}
+            <button className="navlink" onClick={handleLogout}>Logout {activeUser.username}</button>
           </nav>
-        </header>
+        </header>)
+        }
+        {!isLoggedIn && (<header><LogoLarge/></header>)}
         <section className="main-content">
           <Routes>
             {!isLoggedIn && (

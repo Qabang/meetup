@@ -1,0 +1,23 @@
+@import '../../assets/styles/config.scss';
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  padding: 20px;
+
+  input {
+    margin-bottom: 30px;
+  }
+
+  button {
+    background-color: $neutral-dark;
+    color: $light;
+  }
+
+  .error-msg {
+    margin: 30px 0;
+    color: $error;
+  }
+}

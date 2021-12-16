@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { shallow } from 'enzyme'
 
-import Login from '../components/Login'
+import Login from '../components/login/Login'
 
 const mockHandleLogin = jest.fn()
 

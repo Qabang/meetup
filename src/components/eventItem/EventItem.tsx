@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react'
-import LoginContext from '../contexts/LoginContext'
+import LoginContext from '../../contexts/LoginContext'
 import { useParams } from 'react-router-dom'
-import { Events as EventsModel } from '../models/Events'
-import { Users as UsersModel } from '../models/Users'
+import { Events as EventsModel } from '../../models/Events'
+import { Users as UsersModel } from '../../models/Users'
 
 function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) => void}) {
   const { id } = useParams()
@@ -29,7 +29,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) =
 
   return (
     <>
-      <section>
+      <section className="event-item">
         <h2>{event_item.name}</h2>
         <div>
           <span data-test="event-location">

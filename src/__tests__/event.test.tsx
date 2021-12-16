@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { mount, shallow } from 'enzyme'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import EventItem from '../components/EventItem'
+import EventItem from '../components/eventItem/EventItem'
 import eventsTestData from '../components/events/events-testdata.json'
 import LoginContext from '../contexts/LoginContext'
 import { Users } from '../models/Users'

@@ -14,9 +14,23 @@
   }
 }
 
-.events-wrapper {
+.events {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    padding: 7px 14px;
+    margin: 50px auto;
+    width: 300px;
+  }
+
+  .events-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
 }

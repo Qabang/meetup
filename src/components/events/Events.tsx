@@ -38,7 +38,7 @@ function Events(props: {
   }
 
   return (
-    <>
+    <div className='events'>
       <SearchBar searchValue={searchText} setSearchValue={setSearchText} />
       <section className="events-wrapper" data-test="search-results-wrapper">
         {filteredEvents.map((item: any) => (
@@ -49,7 +49,7 @@ function Events(props: {
           />
         ))}
       </section>
-    </>
+    </div>
   )
 }
 

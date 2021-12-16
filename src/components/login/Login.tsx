@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Users } from '../models/Users'
+import { Users } from '../../models/Users'
+import './style.scss'
+
 
 function Login(props: { loggedIn: (bool: boolean, obj: object) => void, users:Users }) {
   const [error, setError] = useState('')
@@ -24,13 +26,13 @@ function Login(props: { loggedIn: (bool: boolean, obj: object) => void, users:Us
     }
   }
   return (
-    <>
+    <div className="login-wrapper">
       <label>Username</label>
       <input
         id="inputUsername"
         data-test="input-field-login"
         type="text"
-        placeholder="Användarnamn"
+        placeholder="username"
         onChange={(event) => setUsername(event.target.value)}
       />
       <label>Password</label>
@@ -38,13 +40,14 @@ function Login(props: { loggedIn: (bool: boolean, obj: object) => void, users:Us
         id="inputPassword"
         data-test="input-field-login"
         type="password"
+        placeholder='password'
         onChange={(event) => setPassword(event.target.value)}
       />
       <button type="submit" data-test="login-btn" onClick={submitLogin}>
         Logga in
       </button>
-      {error && <div data-test="error-msg-container">{error}</div>}
-    </>
+      {error && <div className="error-msg" data-test="error-msg-container">{error}</div>}
+    </div>
   )
 }
 
