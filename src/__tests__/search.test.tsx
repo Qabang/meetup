@@ -38,7 +38,7 @@ describe('Tests for Search', ()=>{
     expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(1);
   });
 
-  test('Search "LOrEm IpSuM", should render 1 events', () => {
+  test('Search on "LOrEm IpSuM", should render 1 events', () => {
     const wrapper = mount(
     <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
     );
@@ -47,5 +47,29 @@ describe('Tests for Search', ()=>{
 
     searchField.simulate("change", { target: { value: searchText } });
     expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(1);
+  });
+
+  test('Search on "Göteborg", should render 2 events with the location set to Göteborg', () => {
+    const wrapper = mount(
+    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+    );
+    const searchText = "göteborg";
+    const searchField = wrapper.find('[data-test="input-search-field"]');
+
+    searchField.simulate("change", { target: { value: searchText } });
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(2);
+  });
+  
+  test('Search on "ipsum", should render 2 events with the one with ipsum in the title and one with ipsum in the desription', () => {
+    const wrapper = mount(
+    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+    );
+    const searchText = "ipsum";
+    const searchField = wrapper.find('[data-test="input-search-field"]');
+
+    searchField.simulate("change", { target: { value: searchText } });
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(2);
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().first().text()).toContain('ipsum');
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().last().text()).not.toContain('ipsum');
   });
 })
