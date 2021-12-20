@@ -1,22 +1,27 @@
 import { useContext, useEffect, useState } from 'react'
 import LoginContext from '../../contexts/LoginContext'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Events as EventsModel } from '../../models/Events'
 import { Users as UsersModel } from '../../models/Users'
 import Rating from '../ratings/Rating'
 
-function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) => void}) {
+function EventItem(props: { events: Array<EventsModel>, joinEvent: (id: number) => void }) {
   const { id } = useParams()
   const event_item = props.events.filter((item) => item.id.toString() === id)[0]
   const [participants, setParticipants] = useState<UsersModel[]>([])
   const user = useContext(LoginContext)
   const [canJoin, setCanJoin] = useState(
     participants.filter((person) => person.username === user.username).length <
-      1
+    1
   )
   const [image, setImage] = useState(event_item.image || 'logo192.png')
-  
-  useEffect(() => {  
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem('activeUser')) {
+      navigate('/');
+    }
+
     setCanJoin(
       user.events.filter((id) => id === event_item.id)
         .length < 1
@@ -74,7 +79,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) =
           {canJoin && (
             <button
               data-test="join-btn"
-              onClick={()=>handleJoinEvent()}
+              onClick={() => handleJoinEvent()}
             >
               Join this event
             </button>
@@ -83,7 +88,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) =
         </section>
         <section>
           <h3>Ratings</h3>
-          <Rating comments={event_item.comments}/>
+          <Rating comments={event_item.comments} />
         </section>
       </section>
     </>

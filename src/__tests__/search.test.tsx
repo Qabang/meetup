@@ -1,24 +1,25 @@
 import { render } from '@testing-library/react'
-import {mount, shallow} from 'enzyme'
+import { mount, shallow } from 'enzyme'
 import SearchBar from '../components/SearchBar'
 import eventsTestData from '../components/events/events-testdata.json'
 import Events from '../components/events/Events'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 
-describe('Tests for Search', ()=>{
-  test('Should render the Searchbar Component', ()=>{
-    render(<SearchBar searchValue='' setSearchValue={jest.fn()}/>)
+describe('Tests for Search', () => {
+  test('Should render the Searchbar Component', () => {
+    render(<SearchBar searchValue='' setSearchValue={jest.fn()} />)
   })
 
-  test('Should render an input field of type text', ()=>{
-    const wrapper = shallow(<SearchBar searchValue='' setSearchValue={jest.fn()}/>)
+  test('Should render an input field of type text', () => {
+    const wrapper = shallow(<SearchBar searchValue='' setSearchValue={jest.fn()} />)
     expect(wrapper.find('input[data-test="input-search-field"]').length).toBe(1)
     expect(wrapper.find('input[data-test="input-search-field"]').type()).toBe('input')
   })
 
   test('Search "Mountain Climbing", should render 0 events', () => {
     const wrapper = mount(
-    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+      <Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>
     );
     const searchText = "Mountain Climbing";
     const searchField = wrapper.find('[data-test="input-search-field"]');
@@ -29,7 +30,7 @@ describe('Tests for Search', ()=>{
 
   test('Search "Lorem ipsum", should render 1 events', () => {
     const wrapper = mount(
-    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+      <Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>
     );
     const searchText = "Lorem Ipsum";
     const searchField = wrapper.find('[data-test="input-search-field"]');
@@ -40,7 +41,7 @@ describe('Tests for Search', ()=>{
 
   test('Search on "LOrEm IpSuM", should render 1 events', () => {
     const wrapper = mount(
-    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+      <Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>
     );
     const searchText = "LOrEm IpSuM";
     const searchField = wrapper.find('[data-test="input-search-field"]');
@@ -51,7 +52,7 @@ describe('Tests for Search', ()=>{
 
   test('Search on "Göteborg", should render 2 events with the location set to Göteborg', () => {
     const wrapper = mount(
-    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+      <Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>
     );
     const searchText = "göteborg";
     const searchField = wrapper.find('[data-test="input-search-field"]');
@@ -59,10 +60,10 @@ describe('Tests for Search', ()=>{
     searchField.simulate("change", { target: { value: searchText } });
     expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(2);
   });
-  
+
   test('Search on "ipsum", should render 2 events with the one with ipsum in the title and one with ipsum in the desription', () => {
     const wrapper = mount(
-    <Events events={eventsTestData} singleEventsCallback={jest.fn()} />
+      <Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>
     );
     const searchText = "ipsum";
     const searchField = wrapper.find('[data-test="input-search-field"]');

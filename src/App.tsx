@@ -5,7 +5,6 @@ import Events from './components/events/Events'
 import EventsData from './components/events/events-data.json'
 import { ReactComponent as Logo } from './logo.svg'
 import { ReactComponent as LogoLarge } from './logo-large.svg'
-// import './App.css'
 import './assets/styles/main.scss'
 
 import {
@@ -18,7 +17,7 @@ import LoginContext from './contexts/LoginContext'
 import EventItem from './components/eventItem/EventItem'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('activeUser'))
   const [activeUser, setActiveUser] = useState<Users>({ username: '', role: '', events: [] })
   const [events, setEvents] = useState(localStorage.getItem('events') != null ? localStorage.getItem('events') : '[{}]')
 
@@ -67,11 +66,19 @@ function App() {
     } else if (localStorage.getItem('events')) {
       setEvents(localStorage.getItem('events'))
     }
-  }, [localStorage.getItem('events'), localStorage.getItem('users')])
 
-  function handleIsLoggedIn(bool: boolean, user: any) {
-    setIsLoggedIn(bool)
+    if ((localStorage.getItem('activeUser') !== null && isLoggedIn !== null) && activeUser.username === '') {
+      let user = localStorage.getItem('activeUser')
+      if (user) {
+        setActiveUser(JSON.parse(user))
+      }
+    }
+  }, [localStorage.getItem('events'), localStorage.getItem('users'), localStorage.getItem('activeUser'), activeUser])
+
+  function handleIsLoggedIn(user: any) {
+    localStorage.setItem('activeUser', JSON.stringify(user))
     setActiveUser(user)
+    setIsLoggedIn(localStorage.getItem('activeUser'))
   }
 
   function handleSingleEventDetails(event_data: any) {
@@ -79,19 +86,23 @@ function App() {
   }
 
   function handleLogout() {
-    setIsLoggedIn(false)
+    setIsLoggedIn(null)
     setActiveUser({ username: '', role: '', events: [] })
+    localStorage.removeItem('activeUser')
     navigate(`/`, { replace: true });
   }
 
   function handleJoinEvent(id: number) {
     let user = activeUser
     user.events.push(id)
+    localStorage.setItem('activeUser', JSON.stringify(user))
     setActiveUser(user)
     const local_storage_users = localStorage.getItem('users') !== null ? localStorage.getItem('users') : '{}'
+
     if (local_storage_users !== null) {
       let tmp_users = JSON.parse(local_storage_users)
       let obj_index = tmp_users.findIndex((item: any) => (item.username === user.username))
+
       if (obj_index) {
         tmp_users[obj_index] = activeUser
         localStorage.setItem('users', JSON.stringify(tmp_users))
@@ -106,7 +117,8 @@ function App() {
           <Logo />
           <nav>
             <NavLink to="/"> Start</NavLink> |
-            <NavLink to="/user/events"> Joined Meetups {activeUser.events.length}</NavLink> |
+            <NavLink to="/user/events"> Joined Meetups</NavLink> |
+            {activeUser.role === 'admin' && <><NavLink to="/add/event"> Add new event</NavLink> | </>}
             <button className="navlink" onClick={handleLogout}>Logout {activeUser.username}</button>
           </nav>
         </header>)
@@ -130,6 +142,10 @@ function App() {
             ></Route>
             <Route
               path="/user/events"
+              element={<Events events={JSON.parse(events || '').filter((event: any) => (activeUser.events.includes(event.id)))} singleEventsCallback={handleSingleEventDetails} />}
+            ></Route>
+            <Route
+              path="/add/event"
               element={<Events events={JSON.parse(events || '').filter((event: any) => (activeUser.events.includes(event.id)))} singleEventsCallback={handleSingleEventDetails} />}
             ></Route>
           </Routes>

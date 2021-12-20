@@ -20,7 +20,7 @@ jest.mock('react-router-dom', () => ({
 
 describe('test for events at startpage "/"', () => {
   test('Renders Events component', () => {
-    render(<Events events={eventsTestData} singleEventsCallback={jest.fn()} />)
+    render(<Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>)
   })
 
   test('Renders EventCard component', () => {
@@ -58,7 +58,7 @@ describe('test for events at startpage "/"', () => {
   })
 
   test('Events Component should render the meetup event name of the first event"Lorem ipsum" and the last event "Programmer Girls night - online event"', () => {
-    render(<Events events={eventsTestData} singleEventsCallback={jest.fn()} />)
+    render(<Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>)
     // Title is tested for 25 characters.
     const title_0 = eventsTestData[0].name.match(/[\s\S]{1,22}/g) || []
     const title_6 = eventsTestData[0].name.match(/[\s\S]{1,22}/g) || []
@@ -159,13 +159,13 @@ describe('test for events at startpage "/"', () => {
   })
 
   test('Component Events should only render the same number of events as items in users events array at "/user/events"', () => {
-    const activeUser =   {
+    const activeUser = {
       username: 'Sandra',
       password: 'admin123',
       role: 'admin',
-      events: [1,5,2],
+      events: [1, 5, 2],
     }
-    const wrapper = mount(<Events events={eventsTestData.filter((event)=>(activeUser.events.includes(event.id)))} singleEventsCallback={jest.fn()} />)
+    const wrapper = mount(<Router><Events events={eventsTestData.filter((event) => (activeUser.events.includes(event.id)))} singleEventsCallback={jest.fn()} /></Router>)
     expect(wrapper.find('[data-test="event-card-wrapper"]').length).toBe(activeUser.events.length)
 
   })

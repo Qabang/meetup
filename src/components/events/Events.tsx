@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { Events as EventsModel } from '../../models/Events'
 import SearchBar from '../SearchBar'
 import EventCard from './EventCard'
@@ -11,7 +12,14 @@ function Events(props: {
   const [searchText, setSearchText] = useState('')
   const [filteredEvents, setFilteredEvents] = useState(props.events)
 
+  const { pathname } = useLocation();
+  let navigate = useNavigate();
+
   useEffect(() => {
+    if (pathname === '/user/events' && !localStorage.getItem('activeUser')) {
+      navigate('/');
+    }
+
     let events = props.events.filter(
       (item: any) =>
         item.name.match(new RegExp(searchText, 'i')) ||
