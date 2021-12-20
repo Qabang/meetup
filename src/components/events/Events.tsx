@@ -31,7 +31,7 @@ function Events(props: {
       )
     })
     setFilteredEvents(sorted_events)
-  }, [searchText])
+  }, [searchText, props.events])
 
   function handleClick(event_data: EventsModel) {
     return props.singleEventsCallback(event_data)

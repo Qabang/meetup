@@ -11,7 +11,8 @@
       "city": "Umeå",
       "adress": "inlandsvägen 100",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
       "city": "Göteborg",
       "adress": "Ebbe Lieberathsgatan 18C",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
       "city": "Stockholm",
       "adress": "Kungsgatan 5",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
       "city": "Göteborg",
       "adress": "Ebbe Lieberathsgatan 18C",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
       "city": "Jönköping",
       "adress": "Huvudgatan 24b",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
       "city": "Malmö",
       "adress": "Examplestrasse 1",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 7,
@@ -96,6 +102,7 @@
       "city": "",
       "adress": "",
       "other": "online"
-    }
+    },
+    "comments": []
   }
 ]

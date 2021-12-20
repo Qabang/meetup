@@ -1,3 +1,5 @@
+import {Comments as CommentsModel} from './Ratings'
+
 export interface Events {
   id: number
   name: string
@@ -12,4 +14,5 @@ export interface Events {
     adress?: string
     other?: string
   }
+  comments: Array<CommentsModel>
 }

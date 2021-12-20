@@ -3,6 +3,7 @@ import LoginContext from '../../contexts/LoginContext'
 import { useParams } from 'react-router-dom'
 import { Events as EventsModel } from '../../models/Events'
 import { Users as UsersModel } from '../../models/Users'
+import Rating from '../ratings/Rating'
 
 function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) => void}) {
   const { id } = useParams()
@@ -82,6 +83,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id:number) =
         </section>
         <section>
           <h3>Ratings</h3>
+          <Rating comments={event_item.comments}/>
         </section>
       </section>
     </>

@@ -11,7 +11,8 @@
       "city": "Göteborg",
       "adress": "Drottninggatan 37",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
       "city": "Göteborg",
       "adress": "Ebbe Lieberathsgatan 18C",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
       "city": "Stockholm",
       "adress": "Kungsgatan 5",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
       "city": "",
       "adress": "",
       "other": "Online"
-    }
+    },
+    "comments": []
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
       "city": "",
       "adress": "",
       "other": "Online"
-    }
+    },
+    "comments": []
   },
   {
     "id": 6,
@@ -81,7 +86,8 @@
       "city": "Malmö",
       "adress": "Examplestrasse 1",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 7,
@@ -95,7 +101,8 @@
       "city": "Malmö",
       "adress": "Examplestrasse 1",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 8,
@@ -109,7 +116,8 @@
       "city": "Malmö",
       "adress": "Examplestrasse 1",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 9,
@@ -123,7 +131,8 @@
       "city": "Malmö",
       "adress": "Examplestrasse 1",
       "other": ""
-    }
+    },
+    "comments": []
   },
   {
     "id": 10,
@@ -138,7 +147,8 @@
       "city": "",
       "adress": "",
       "other": "online"
-    }
+    },
+    "comments": []
   },
   {
     "id": 11,
@@ -153,7 +163,8 @@
       "city": "",
       "adress": "",
       "other": "online"
-    }
+    },
+    "comments": []
   },
   {
     "id": 12,
@@ -168,6 +179,7 @@
       "city": "",
       "adress": "",
       "other": "online"
-    }
+    },
+    "comments": []
   }
 ]
