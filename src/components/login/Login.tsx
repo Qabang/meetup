@@ -7,7 +7,7 @@ function Login(props: { loggedIn: (obj: object) => void, users: Users }) {
   const [error, setError] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const local_storage_users: string | null = localStorage.getItem('users')
+  const local_storage_users = localStorage.getItem('users')
   const users = useState(local_storage_users !== null ? JSON.parse(local_storage_users) : [props.users])
 
 
