@@ -15,6 +15,7 @@ import {
 } from 'react-router-dom'
 import LoginContext from './contexts/LoginContext'
 import EventItem from './components/eventItem/EventItem'
+import AddEvent from './components/addEvent/AddEvent'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('activeUser'))
@@ -114,7 +115,7 @@ function App() {
     <div className="App">
       <LoginContext.Provider value={activeUser}>
         {isLoggedIn && (<header className="App-header">
-          <Logo />
+          <Logo data-test="app-logo" />
           <nav>
             <NavLink to="/"> Start</NavLink> |
             <NavLink to="/user/events"> Joined Meetups</NavLink> |
@@ -123,7 +124,7 @@ function App() {
           </nav>
         </header>)
         }
-        {!isLoggedIn && (<header><LogoLarge /></header>)}
+        {!isLoggedIn && (<header><LogoLarge data-test="app-logo" /></header>)}
         <section className="main-content">
           <Routes>
             {!isLoggedIn && (
@@ -146,7 +147,7 @@ function App() {
             ></Route>
             <Route
               path="/add/event"
-              element={<Events events={JSON.parse(events || '').filter((event: any) => (activeUser.events.includes(event.id)))} singleEventsCallback={handleSingleEventDetails} />}
+              element={<AddEvent />}
             ></Route>
           </Routes>
         </section>

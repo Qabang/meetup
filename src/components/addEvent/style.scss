@@ -1,0 +1,71 @@
+@import '../../assets/styles/config.scss';
+
+.add-event-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  form {
+    color: $neutral-dark;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 380px;
+
+    label,
+    & > div {
+      margin: 15px 0;
+    }
+
+    .radios {
+      text-align: center;
+      justify-content: center;
+
+      label {
+        margin: 15px auto;
+      }
+    }
+
+    & > label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      label {
+        margin: 10px auto;
+      }
+      input {
+        margin: 0 10px;
+      }
+    }
+
+    input[type='submit'] {
+      margin: 15px auto;
+      padding: 10px 25px;
+      border-radius: 30px;
+      background-color: $neutral-dark;
+      color: $light;
+    }
+  }
+
+  .error-container {
+    border: $error 4px solid;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgba($error, 0.3);
+
+    li {
+      display: block;
+      list-style-type: none;
+      margin: 10px;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
