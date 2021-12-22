@@ -119,7 +119,7 @@ function App() {
           <nav>
             <NavLink to="/">Start</NavLink> |
             <NavLink to="/user/events">Joined Meetups</NavLink> |
-            {activeUser.role === 'admin' && <><NavLink to="/add/event"> Add new event</NavLink> | </>}
+            {activeUser.role === 'admin' && <><NavLink to="/add/event">Add new event</NavLink> | </>}
             <button data-test="logout-btn" className="navlink" onClick={handleLogout}>Logout {activeUser.username}</button>
           </nav>
         </header>)

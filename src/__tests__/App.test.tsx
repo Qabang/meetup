@@ -10,13 +10,22 @@ import Login from '../components/login/Login';
 
 describe('Tests for App', () => {
 
-  const correctUsername = 'Sandra'
-  const correctPassword = 'admin123'
+  const adminUsername = 'Sandra'
+  const adminPassword = 'admin123'
+  const userUsername = 'Ruby'
+  const userPassword = 'password123'
 
-  function loginUser(wrapper: any) {
+  function loginUser(wrapper: any, role = 'admin') {
     const inputs = wrapper.find('input[data-test="input-field-login"]')
-    inputs.at(0).simulate('change', { target: { value: correctUsername } })
-    inputs.at(1).simulate('change', { target: { value: correctPassword } })
+
+    if (role === 'admin') {
+      inputs.at(0).simulate('change', { target: { value: adminUsername } })
+      inputs.at(1).simulate('change', { target: { value: adminPassword } })
+    } else {
+      inputs.at(0).simulate('change', { target: { value: userUsername } })
+      inputs.at(1).simulate('change', { target: { value: userPassword } })
+
+    }
 
     wrapper.find('[data-test="login-btn"]').simulate('click')
   }
@@ -65,12 +74,30 @@ describe('Tests for App', () => {
     logoutUser(wrapper)
   })
 
+  test('The nav element should only render add event link if user is admin, user is admin Should render Link', () => {
+    const wrapper = mount(<Router><App /></Router>);
+    loginUser(wrapper)
+
+    const nav = wrapper.find('nav')
+    expect(nav.text().includes('Add new event')).toBe(true)
+    logoutUser(wrapper)
+  })
+
+  test('The nav element should only render add event link if user is admin, user is not admin Should not render Link', () => {
+    const wrapper = mount(<Router><App /></Router>);
+    loginUser(wrapper, 'user')
+
+    const nav = wrapper.find('nav')
+    expect(nav.text().includes('Add new event')).toBe(false)
+    logoutUser(wrapper)
+  })
+
   test('The nav element\'s should render a logout button with the text "Logout [username]"', () => {
     const wrapper = mount(<Router><App /></Router>);
     loginUser(wrapper)
 
     const nav = wrapper.find('nav')
-    const expectedText = 'Logout ' + correctUsername
+    const expectedText = 'Logout ' + adminUsername
 
     expect(nav.find('button[data-test="logout-btn"]').length).toBe(1)
     expect(nav.find('button[data-test="logout-btn"]').text()).toBe(expectedText)
