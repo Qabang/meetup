@@ -15,7 +15,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id: number) 
     participants.filter((person) => person.username === user.username).length <
     1
   )
-  const [image, setImage] = useState(event_item.image || 'logo192.png')
+  const [image, setImage] = useState(event_item.image || 'logo.png')
   let navigate = useNavigate();
 
   useEffect(() => {

@@ -73,7 +73,7 @@ describe('test for events at startpage "/"', () => {
     )
     expect(
       wrapper.find('[data-test="image-container"]').props().style
-    ).toHaveProperty('backgroundImage', 'url("/logo192.png")')
+    ).toHaveProperty('backgroundImage', 'url("/logo.png")')
   })
 
   test('EventCard should render the event image as a background image', () => {

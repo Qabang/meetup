@@ -50,7 +50,7 @@ function Events(props: {
     <div className='events'>
       <SearchBar searchValue={searchText} setSearchValue={setSearchText} />
       <div>
-        <button data-test="toggle-old-events" onClick={() => { setIsVisible(!isVisible) }}>toggle show old events</button>
+        <button data-test="toggle-old-events" onClick={() => { setIsVisible(!isVisible) }}>{!isVisible ? 'Show' : 'Hide'} old events</button>
       </div>
       <section className="events-wrapper" data-test="search-results-wrapper">
         {filteredEvents.map((item: any) => (
