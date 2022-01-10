@@ -19,4 +19,4 @@
 
 ## Use case-diagram
 
-![use case diagram](https://github.com/[qabang]/[meetup]/blob/[main]/usecase-diagram.png?raw=true)
+![use case diagram](https://github.com/Qabang/meetup/blob/main/usecase-diagram.png?raw=true)
