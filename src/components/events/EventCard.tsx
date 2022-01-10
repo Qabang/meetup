@@ -24,8 +24,6 @@ function EventCard(props: { event_item: EventsModel, eventCallback: (item_data: 
   return (
     <>
       <section className={showCard ? isOldEvent ? 'event-card' : 'event-card old' : isOldEvent ? '' : 'event-card hidden'} data-test="event-card-wrapper">
-        {showCard && 'Visible'}
-        {isOldEvent && 'OLD'}
         <h2>{title}</h2>
         <div
           className="image-container"

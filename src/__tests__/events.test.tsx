@@ -103,7 +103,7 @@ describe('test for events at startpage "/"', () => {
     const wrapper = mount(
       <EventCard event_item={eventsTestData[6]} eventCallback={mockOnClick} />
     )
-    expect(wrapper.find('[data-test="event-date"]').text()).toBe('04-08-2022')
+    expect(wrapper.find('[data-test="event-date"]').text()).toBe('2022-08-04')
   })
 
   test('EventCard should render the place of the event', () => {

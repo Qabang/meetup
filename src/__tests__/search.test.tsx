@@ -70,7 +70,8 @@ describe('Tests for Search', () => {
 
     searchField.simulate("change", { target: { value: searchText } });
     expect(wrapper.find('[data-test="search-results-wrapper"]').children().length).toBe(2);
-    expect(wrapper.find('[data-test="search-results-wrapper"]').children().first().text()).toContain('ipsum');
-    expect(wrapper.find('[data-test="search-results-wrapper"]').children().last().text()).not.toContain('ipsum');
+
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().last().text()).toContain('ipsum');
+    expect(wrapper.find('[data-test="search-results-wrapper"]').children().first().text()).not.toContain('ipsum');
   });
 })

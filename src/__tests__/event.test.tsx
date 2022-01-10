@@ -1,12 +1,11 @@
-import { configure, render, screen } from '@testing-library/react'
-import { mount, shallow } from 'enzyme'
-import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom'
+import { render, screen } from '@testing-library/react'
+import { mount } from 'enzyme'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import EventItem from '../components/eventItem/EventItem'
 import eventsTestData from '../components/events/events-testdata.json'
 import LoginContext from '../contexts/LoginContext'
 import { Users } from '../models/Users'
-
 
 //Needed to mock react-router-dom in tests
 jest.mock('react-router-dom', () => ({
