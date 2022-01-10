@@ -5,6 +5,7 @@
     "date": "2022-12-16",
     "time_start": "17:00",
     "time_end": "21:00",
+    "image": "images/dmitri-nesteruk.jpg",
     "description": "Hi Guys, We will on the 16th of December have a tech-quiz at our office and you are welcome! The quiz event will start at 17:30 and it will be held by a tech-savvy quizmaster. We will during the quiz of course offer you food and beverages. Besides the quiz you will of course get to chat with us at Devies and other tech people. If you have to cancel please do that no later than one week before the quiz. We hope to see you there",
     "participants": 30,
     "location": {
@@ -20,6 +21,7 @@
     "date": "2022-02-12",
     "time_start": "19:00",
     "time_end": "21:00",
+    "image": "images/biegun-wschodni.jpg",
     "description": "In this section you will be introduced to our 5 chapter series. We will then kick it of by setting up a vanilla Spring boot project and analyze the maven dependencies. Then we will kick it up a notch and use JHipster to generate the project for us and show the benefits of this amazing tool. \n Completing this section will make it easy for you to get started on your new projects, microservices and similar",
     "participants": 80,
     "location": {
@@ -35,6 +37,7 @@
     "date": "2022-03-08",
     "time_start": "18:00",
     "time_end": "21:00",
+    "image": "images/tai-bui.jpg",
     "description": "Talk will be followed with a quick demo. We invite all practitioners to try. the data services and provide feedback & help us improve with community contribution! \n\n The participants will receive a access to try out the data service offering of ionir ( and if you are lucky will receive a gift card sponsored by ionir) \n According to the Data on Kubernetes 2021 Report, organizations are twice as productive after adopting Kubernetes to manage their data and workloads. The majority of organizations who have implemented \n DevOps have also adopted Kubernetes data services. With the ability to access data in real-time, DevOps organizations are using Kubernetes data services to gain a competitive advantage. As business demands increase, we can expect to see more organizations adopting data services to achieve faster, more efficient, and scalable DevOps operations. If you haven’t already adopted data services into your organization, \n the time is now.",
     "participants": 35,
     "location": {
@@ -50,6 +53,7 @@
     "date": "2022-03-26",
     "time_start": "17:00",
     "time_end": "19:00",
+    "image": "images/nasa.jpg",
     "description": "Confirmed participants include: Apple, Amazon, Cisco, Meta, Sonorium, Snap, and many others! Get ready for a full day of disruptive ideas and ground-breaking insights as we bring together the most revolutionary minds and reflect on the next big thing!",
     "participants": 100,
     "location": {
@@ -80,6 +84,7 @@
     "date": "2021-12-01",
     "time_start": "17:00",
     "time_end": "19:30",
+    "image": "images/sean-benesh.jpg",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
     "participants": 65,
     "location": {
@@ -95,6 +100,7 @@
     "date": "2022-01-05",
     "time_start": "17:00",
     "time_end": "19:30",
+    "image": "images/sean-benesh.jpg",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
     "participants": 65,
     "location": {
@@ -110,6 +116,7 @@
     "date": "2022-02-02",
     "time_start": "17:00",
     "time_end": "19:30",
+    "image": "images/sean-benesh.jpg",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
     "participants": 65,
     "location": {
@@ -125,6 +132,7 @@
     "date": "2022-03-02",
     "time_start": "17:00",
     "time_end": "19:30",
+    "image": "images/sean-benesh.jpg",
     "description": "Our monthly Meetup covers all things JavaScript, from frontend frameworks, popular libraries, NodeJS, and everything in between. Please check back closer to the scheduled date for the details for this event. Please note that due to the CoronaVirus, we only be meeting virtually until further notice.",
     "participants": 65,
     "location": {
