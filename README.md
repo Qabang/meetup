@@ -16,3 +16,7 @@
 
 - Som admin vill jag kunna göra samma saker som en användare kan.
 - Som admin vill jag kunna lägga till nya event.
+
+## Use case-diagram
+
+![use case diagram](https://github.com/[qabang]/[meetup]/blob/[main]/usecase-diagram.png?raw=true)
