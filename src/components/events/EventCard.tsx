@@ -4,6 +4,7 @@ import { Events as EventsModel } from '../../models/Events'
 function EventCard(props: { event_item: EventsModel, eventCallback: (item_data: EventsModel) => void, isVisible?: boolean }) {
   const event_item = props.event_item
   const image = event_item.image ? event_item.image : 'logo192.png'
+  const image_url = (image.indexOf("http://") === 0 || image.indexOf("https://") === 0) ? image : `/${image}`
   const [title, setTitle] = useState(event_item.name)
 
   let place = event_item.location.city ? event_item.location.city : event_item.location.other
@@ -28,7 +29,7 @@ function EventCard(props: { event_item: EventsModel, eventCallback: (item_data: 
         <div
           className="image-container"
           data-test="image-container"
-          style={{ backgroundImage: `url("/${image}")` }}
+          style={{ backgroundImage: `url("${image_url}")` }}
         >
         </div>
         <div>
