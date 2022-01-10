@@ -8,6 +8,7 @@ import Rating from '../ratings/Rating'
 function EventItem(props: { events: Array<EventsModel>, joinEvent: (id: number) => void }) {
   const { id } = useParams()
   const event_item = props.events.filter((item) => item.id.toString() === id)[0]
+  const isOldEvent = new Date(event_item.date).valueOf() > new Date().valueOf()
   const [participants, setParticipants] = useState<UsersModel[]>([])
   const user = useContext(LoginContext)
   const [canJoin, setCanJoin] = useState(
@@ -76,7 +77,7 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id: number) 
               ? event_item.location.city
               : event_item.location.other}
           </div>
-          {canJoin && (
+          {canJoin && isOldEvent && (
             <button
               data-test="join-btn"
               onClick={() => handleJoinEvent()}
@@ -84,6 +85,8 @@ function EventItem(props: { events: Array<EventsModel>, joinEvent: (id: number) 
               Join this event
             </button>
           )}
+          {canJoin && !isOldEvent && (<span data-test="event-passed">This event has already taken place.</span>)}
+
           {!canJoin && <span data-test="event-joined">Already Joined this event!</span>}
         </section>
         <section>

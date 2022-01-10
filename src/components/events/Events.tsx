@@ -11,6 +11,7 @@ function Events(props: {
 }) {
   const [searchText, setSearchText] = useState('')
   const [filteredEvents, setFilteredEvents] = useState(props.events)
+  const [isVisible, setIsVisible] = useState(false)
 
   const { pathname } = useLocation();
   let navigate = useNavigate();
@@ -48,12 +49,16 @@ function Events(props: {
   return (
     <div className='events'>
       <SearchBar searchValue={searchText} setSearchValue={setSearchText} />
+      <div>
+        <button data-test="toggle-old-events" onClick={() => { setIsVisible(!isVisible) }}>toggle show old events</button>
+      </div>
       <section className="events-wrapper" data-test="search-results-wrapper">
         {filteredEvents.map((item: any) => (
           <EventCard
             key={item.id}
             event_item={item}
             eventCallback={handleClick}
+            isVisible={isVisible}
           />
         ))}
       </section>

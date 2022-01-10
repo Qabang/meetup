@@ -169,4 +169,129 @@ describe('test for events at startpage "/"', () => {
     expect(wrapper.find('[data-test="event-card-wrapper"]').length).toBe(activeUser.events.length)
 
   })
+
+  test('Display all Events, should only display events with dates from tomorrow and forward', () => {
+    const today_date = new Date().toLocaleDateString('sv-SE')
+
+    let tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    const tomorrow_date = new Date(tomorrow).toLocaleDateString('sv-SE')
+
+    let yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1)
+    const yesterday_date = new Date(yesterday).toLocaleDateString('sv-SE')
+
+    const data = [{
+      id: 1,
+      name: "Today",
+      date: today_date,
+      time_start: "23.59",
+      time_end: "23.59",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }, {
+      id: 2,
+      name: "Tomorrow",
+      date: tomorrow_date,
+      time_start: "09:00",
+      time_end: "13:00",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }, {
+      id: 3,
+      name: "Yesterday",
+      date: yesterday_date,
+      time_start: "09:00",
+      time_end: "13:00",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }]
+    const wrapper = mount(<Router><Events events={data} singleEventsCallback={jest.fn()} /></Router>)
+
+    expect(wrapper.find('.hidden').length).toBe(2);
+    expect(wrapper.find('[data-test="event-card-wrapper"]').length).toBe(3)
+
+  })
+
+  test('Toggle old events, should display all events even with old dates', () => {
+    const today_date = new Date().toLocaleDateString('sv-SE')
+
+    let tomorrow = new Date()
+    tomorrow.setDate(tomorrow.getDate() + 1)
+    const tomorrow_date = new Date(tomorrow).toLocaleDateString('sv-SE')
+
+    let yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1)
+    const yesterday_date = new Date(yesterday).toLocaleDateString('sv-SE')
+
+    const data = [{
+      id: 1,
+      name: "Today",
+      date: today_date,
+      time_start: "23.59",
+      time_end: "23.59",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }, {
+      id: 2,
+      name: "Tomorrow",
+      date: tomorrow_date,
+      time_start: "09:00",
+      time_end: "13:00",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }, {
+      id: 3,
+      name: "Yesterday",
+      date: yesterday_date,
+      time_start: "09:00",
+      time_end: "13:00",
+      description: "Lorem ipsum dolor",
+      participants: 10,
+      location: {
+        city: "Umeå",
+        adress: "inlandsvägen 100",
+        other: ""
+      },
+      comments: []
+    }]
+    const wrapper = mount(<Router><Events events={data} singleEventsCallback={jest.fn()} /></Router>)
+    const toggle = wrapper.find('[data-test="toggle-old-events"]')
+
+    toggle.simulate('click')
+
+    expect(wrapper.find('[data-test="event-card-wrapper"]').length).toBe(3)
+    expect(wrapper.find('.hidden').length).toBe(0);
+
+  })
 })

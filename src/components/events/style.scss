@@ -12,6 +12,14 @@
     background-position: center;
     background-size: cover;
   }
+
+  &.old {
+    color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 .events {
