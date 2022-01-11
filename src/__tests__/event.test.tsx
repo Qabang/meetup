@@ -47,6 +47,15 @@ describe('Tests for single event "/event/:id"', () => {
     expect(screen.queryAllByText(expected)[0]).toBeInTheDocument()
   })
 
+  test('Component should render the text "Be the first to rate this event!" when there is no ratings.', () => {
+    render(
+      <Router>
+        <EventItem events={eventsTestData} joinEvent={jest.fn()} />
+      </Router>
+    )
+    expect(screen.queryByText(/Be the first to rate this event!/i)).toBeInTheDocument()
+  })
+
   test('Component should render the event start end end time like 00:00 - 01:00', () => {
     const expected =
       eventsTestData[0].time_start + ' - ' + eventsTestData[0].time_end
