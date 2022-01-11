@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Events as EventsModel } from '../../models/Events'
+import { GoArrowRight } from 'react-icons/go';
 
 function EventCard(props: { event_item: EventsModel, eventCallback: (item_data: EventsModel) => void, isVisible?: boolean }) {
   const event_item = props.event_item
@@ -32,12 +33,12 @@ function EventCard(props: { event_item: EventsModel, eventCallback: (item_data: 
           style={{ backgroundImage: `url("${image_url}")` }}
         >
         </div>
-        <div>
+        <div className='event-info'>
           <span data-test="event-date">{event_item.date}</span>
           <span data-test="event-location">{place && place}</span>
         </div>
         <div>
-          <button data-test="read-more-btn" onClick={() => (props.eventCallback(event_item))}>Read more</button>
+          <button data-test="read-more-btn" onClick={() => (props.eventCallback(event_item))}>Read more <GoArrowRight className="arrow-right" /></button>
         </div>
       </section>
     </>

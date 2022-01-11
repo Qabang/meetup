@@ -1,9 +1,15 @@
+@import '../../assets/styles/config.scss';
+
 .event-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-basis: calc(33% - 30px);
   margin: 15px;
   box-sizing: border-box;
+  border: 3px solid $neutral-light;
+  box-shadow: 6px 4px 4px rgba(rgb(175, 175, 175), 0.5);
+  padding: 15px;
 
   .image-container {
     width: 100%;
@@ -15,10 +21,49 @@
 
   &.old {
     color: rgba($color: #000000, $alpha: 0.5);
+    filter: saturate(30%);
   }
 
   &.hidden {
     display: none;
+  }
+
+  h2 {
+    min-height: 60px;
+  }
+
+  .event-info {
+    position: absolute;
+    width: calc(100% - 30px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: calc(155px + 60px);
+    backdrop-filter: blur(2px);
+    background-color: rgba($light, 0.6);
+    font-weight: bolder;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px;
+    background-color: $cta;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: lighten($cta, 5%);
+    }
+    .arrow-right {
+      font-size: 16px;
+      margin: auto 0 auto 20px;
+    }
   }
 }
 

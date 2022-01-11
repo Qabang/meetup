@@ -17,6 +17,8 @@ jest.mock('react-router-dom', () => ({
 }))
 
 describe('Tests for single event "/event/:id"', () => {
+  beforeAll(() => { window.scrollTo = jest.fn() })
+
   test('Component EventItem is rendered', () => {
     render(
       <Router>
@@ -42,7 +44,7 @@ describe('Tests for single event "/event/:id"', () => {
         <EventItem events={eventsTestData} joinEvent={jest.fn()} />
       </Router>
     )
-    expect(screen.queryByText(expected)).toBeInTheDocument()
+    expect(screen.queryAllByText(expected)[0]).toBeInTheDocument()
   })
 
   test('Component should render the event start end end time like 00:00 - 01:00', () => {

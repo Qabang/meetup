@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { Events as EventsModel } from '../../models/Events'
-import SearchBar from '../SearchBar'
+import SearchBar from '../Search/SearchBar'
 import EventCard from './EventCard'
 import './style.scss'
 
@@ -50,7 +50,9 @@ function Events(props: {
     <div className='events'>
       <SearchBar searchValue={searchText} setSearchValue={setSearchText} />
       <div>
-        <button data-test="toggle-old-events" onClick={() => { setIsVisible(!isVisible) }}>{!isVisible ? 'Show' : 'Hide'} old events</button>
+        <button
+          className='toggle-btn'
+          data-test="toggle-old-events" onClick={() => { setIsVisible(!isVisible) }}>{!isVisible ? 'Show' : 'Hide'} old events</button>
       </div>
       <section className="events-wrapper" data-test="search-results-wrapper">
         {filteredEvents.map((item: any) => (

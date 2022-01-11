@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { mount, shallow } from 'enzyme'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/Search/SearchBar'
 import eventsTestData from '../components/events/events-testdata.json'
 import Events from '../components/events/Events'
 import { BrowserRouter as Router } from 'react-router-dom'

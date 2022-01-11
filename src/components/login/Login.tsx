@@ -42,7 +42,7 @@ function Login(props: { loggedIn: (obj: object) => void, users: Users }) {
         placeholder='password'
         onChange={(event) => setPassword(event.target.value)}
       />
-      <button type="submit" data-test="login-btn" onClick={submitLogin}>
+      <button type="submit" data-test="login-btn" className='login-btn' onClick={submitLogin}>
         Logga in
       </button>
       {error && <div className="error-msg" data-test="error-msg-container">{error}</div>}

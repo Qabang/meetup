@@ -67,6 +67,7 @@ const mockEvents = [
 describe('Tests for ratings on events', () => {
   beforeAll(() => {
     localStorage.setItem('events', JSON.stringify(mockEvents))
+    window.scrollTo = jest.fn()
   })
   afterAll(() => {
     localStorage.clear()

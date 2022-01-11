@@ -19,6 +19,8 @@ jest.mock('react-router-dom', () => ({
 }))
 
 describe('test for events at startpage "/"', () => {
+  beforeAll(() => { window.scrollTo = jest.fn() })
+
   test('Renders Events component', () => {
     render(<Router><Events events={eventsTestData} singleEventsCallback={jest.fn()} /></Router>)
   })
@@ -96,7 +98,7 @@ describe('test for events at startpage "/"', () => {
     const wrapper = mount(
       <EventCard event_item={eventsTestData[6]} eventCallback={mockOnClick} />
     )
-    expect(wrapper.find('[data-test="read-more-btn"]').text()).toBe('Read more')
+    expect(wrapper.find('[data-test="read-more-btn"]').text()).toContain('Read more')
   })
 
   test('EventCard should render the date of the event', () => {

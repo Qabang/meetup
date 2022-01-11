@@ -1,0 +1,25 @@
+@import '../../assets/styles/config.scss';
+
+.search-wrapper {
+  display: flex;
+  position: relative;
+
+  .search-icon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-left: calc(50% + 140px);
+    top: 50%;
+    font-size: 25px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 20px;
+    border-radius: 5px;
+
+    &:focus {
+      outline-color: $cta;
+    }
+  }
+}

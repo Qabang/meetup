@@ -17,12 +17,49 @@ header {
   justify-content: center;
   padding: 30px 0;
 
+  nav {
+    display: flex;
+    width: 100%;
+    max-width: calc(1035px - 150px);
+    box-sizing: border-box;
+    padding: 0 30px;
+  }
+
   a {
+    border-bottom: 1px solid $light;
+    padding: 0;
+    line-height: 20px;
+  }
+
+  button,
+  a {
+    margin: auto 20px;
+    font-family: $font-text;
     color: $light;
+    font-size: 18px;
+    text-decoration: none;
 
     &:hover {
       color: $neutral-light;
+      cursor: pointer;
     }
+  }
+
+  button {
+    background-color: $neutral-dark;
+    color: $light;
+    border-radius: 20px;
+    padding: 6px 13px;
+    margin-left: auto;
+
+    &:hover {
+      background-color: lighten($neutral-dark, 3%);
+      color: $light;
+    }
+  }
+
+  svg {
+    margin-left: 30px;
   }
 }
 
@@ -104,4 +141,25 @@ textarea {
 
 .App-link {
   color: #61dafb;
+}
+
+.toggle-btn,
+.join-btn,
+.submit-btn,
+.login-btn {
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: auto;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  background-color: $neutral-light;
+  font-family: $font-text;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.error-msg {
+  color: $error;
+  font-weight: 900;
+  font-size: 14px;
 }
