@@ -199,12 +199,8 @@ describe('Test for AddEvent on route "/add/event"', () => {
 
   test('Click on submit with data in required form fields should generate success continer element containing string "Event has been added successfully!"', () => {
     const date = new Date().toISOString().split('T', 1)[0]
-
     const startTime = formatTime(1)
     const endTime = formatTime(3)
-
-    console.log(startTime)
-    console.log(endTime)
     const expectedText = 'Event has been added successfully!'
     const wrapper = mount(<AddEvent />)
     const button = wrapper.find('[data-test="event-submit"]')

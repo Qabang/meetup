@@ -28,7 +28,6 @@ function AddEvent() {
 
         const filteredEvents = parsedEvents.filter((item: any) => item.id === event.id)
 
-        console.log(filteredEvents.length)
         if (filteredEvents.length < 1) {
           parsedEvents.push(event)
           localStorage.setItem('events', JSON.stringify(parsedEvents))
